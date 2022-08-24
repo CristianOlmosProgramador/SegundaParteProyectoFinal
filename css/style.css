@@ -1,0 +1,16 @@
+
+
+
+.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+  }
+
+.red{
+    background-color: red;
+}
+
+.color1{
+    background-color: red;
+}

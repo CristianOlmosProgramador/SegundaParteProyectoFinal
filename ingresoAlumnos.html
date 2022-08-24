@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- <link rel="stylesheet" href="@sweetalert2/theme-borderless/borderless.css"> -->
+
+  </head>
+  <body class="bg-dark">
+
+
+    <nav class="navbar navbar-expand-lg text-white bg-dark">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="#">Logo</a> -->
+          <img src="assets/imagenes/images-removebg-preview.png" alt="" width="100" height="100">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav navbar-center">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/menuPrincipal.html">Inicio</a>
+              </li>
+             
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Ingresos 
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/ingresoAlumnos.html">Ingreso Alumnos</a></li>
+                  <li><a class="dropdown-item" href="/IngresoCalificaciones.html">Ingreso Calificaciones</a></li>
+                  <li><a class="dropdown-item" href="/ActualizarCalificaciones.html">Buscar Calificaciones</a></li>
+                  <!-- <li><a class="dropdown-item" href="#">Ingreso Profesores</a></li>
+                  <li><a class="dropdown-item" href="#">Ingreso Asignaturas</a></li> -->
+                </ul>
+                
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Libro Digital 
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/calcularCalificaciones.html">Calculo Calificaciones</a></li>
+                </ul>
+                
+              </li>
+
+              <li class="nav-item">
+                <!-- <a class="nav-link active" aria-current="page" href="#">Control Asistencia</a> -->
+              </li>
+
+             
+
+            </ul>
+          
+          </div>
+       
+            <button type="submit" id="cerrar" class="color1">   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-power red" viewBox="0 0 16 16">
+                <path d="M7.5 1v7h1V1h-1z"/>
+                <path d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"/>
+              </svg></button>
+         
+        </div>
+        
+      </nav>
+
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class=" bg-dark text-white" style="border-radius: 1rem;">
+                <div class="text-center">
+                    <!-- <img src="/imagenes/images-removebg-preview.png" alt=""> -->
+                  <div class="mb-md-5 mt-md-4 pb-5">
+                    
+                    <h5 class="fw-bold mb-2 text-uppercase">FORMULARIO PARA EL INGRESO DE ALUMNOS</h5>
+                 
+                  
+                    <div class="form-outline form-white mb-4">
+                        <label class="form-label" for="" id="">DNI</label>
+                        <input type="text" id="dni" class="form-control form-control-lg" /> 
+                       
+                      </div>
+
+                    <div class="form-outline form-white mb-4">
+                        <label class="form-label" for="" id="">Nombre Completo Alumno</label>
+                        <input type="text" id="nombreAlumno" class="form-control form-control-lg" />
+                       
+                      </div>
+
+                      <div class="form-outline form-white mb-4">
+                        <label class="form-label" for="text" id="user">Edad</label>
+                        <input type="number" id="edad" class="form-control form-control-lg" />
+                       
+                      </div>
+        
+                      <div class="form-outline form-white mb-4">
+                        <label class="form-label" for="typePasswordX" id="pass1">Curso</label>
+                        <input type="text" id="curso" class="form-control form-control-lg" />
+                      
+                      </div>
+
+      
+                    <!-- <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Se te olvidó tu contraseña?</a></p> -->
+      
+                    <button class="btn btn-outline-light btn-lg px-5" type="submit" id="registrarAlumno" >REGISTRAR ALUMNO</button>
+                  
+                    
+
+                    <div class="d-flex justify-content-center text-center mt-4 pt-1">
+                      <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                      <a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
+                      <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
+                    </div>
+      
+                  </div>
+      
+                  <div>
+                    <!-- <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a> -->
+                    </p>
+                  </div>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+   
+      <div class="modal" tabindex="-1" role="dialog" id="modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Credenciales Invalidas</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="warning">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Porfavor ingresa credenciales validas</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">OK</button>
+              <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container col-8 my-5 br-2 rounded">
+        <div class="row g-3">
+            <div class="col-4 order-md-last">
+                
+                
+            </div>
+            <div class="col-8">
+              
+            </div>
+            
+        </div>
+        <hr>
+        <div class="card bg-info text-center">
+            <h4>Ingreso de Alumnos</h4>
+        </div>
+        <div class="car-footer p-2">
+            <!-- <button class="btn-primary" id="grabar">Grabar</button> -->
+            <table class="table table-striped table-bordered mt-3 " >
+                <thead class="text-center font-weight-bold">
+                    <tr class="bg-secondary text-white">
+                        <td>Dni</td>
+                        <td>Nombre Completo</td>
+                        <td>Edad</td>
+                        <td>Curso</td>
+                    </tr>
+                </thead>
+                <tbody id="addtabla">
+                    
+                </tbody>                  
+            </table>
+       </div>
+    <!-- </div class="center">          
+    <button class="btn btn-outline-light btn-lg px-5" type="submit" id="volver" >VOLVER</button>
+      </div>
+    -->
+   <!-- scripts -->
+   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <script src="./js/logicaIngresarAlumnos.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+       <!-- Script de sweet alrt -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- <script src="sweetalert2/dist/sweetalert2.min.js"></script> -->
+  </body>
+</html>
+
+
+
+ 
