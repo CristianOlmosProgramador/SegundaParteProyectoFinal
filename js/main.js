@@ -88,7 +88,13 @@
 
                 if(validarInput()){
                     if(existeUsuarioLocalStorage()){
-                        window.open('menuPrincipal.html','_self')
+                        MensajeExitoso(); 
+
+                        setTimeout(()=>{
+                            window.open('menuPrincipal.html','_self')
+                        },2000)
+
+                       
                     }
                 }
 
@@ -97,7 +103,7 @@
             });
             
             const MensajeExitoso = ()=>{
-                swal("Bienvenido", "Gracias... su registro se realizo correctamente", "success");
+                swal("Bienvenido", "Su ingreso se realizo correctamente", "success");
                 return true;
             }
             

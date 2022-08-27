@@ -39,7 +39,6 @@
     if(btnPromediar){
         btnPromediar.addEventListener('click', ()=>{
       
-      
             // Primero valida que los campos no esten vacios. 
             if(validacionesCamposVacios()){
                 
@@ -49,28 +48,7 @@
                 }else{
                     MensajeAlumnoExiste();
                 }
-                
-                //funciona el registrar
-              
-    
-                // if(validarCalificaciones()){
-    
-                //     //Promediar la suma de las notas entre 3
-                //     let resultado = obtenerPromedio();  
-                //     console.log(resultado);     
-                   
-                //     let observacion = obs(resultado);
-                    
-                //     if(existeAlumnoPromedio()){
-                //         crearTablaHtml(dni.value,nombreCompletoAlumno.value,notaUno.value,notaDos.value,notaTres.value,resultado,observacion);
-                //         LimpiarCampos();
-                //     }
-                    
-                 
-                                
-                //     console.log(arrPromedios);
-                // }
-    
+           
             }
     
         });
@@ -145,7 +123,6 @@
     const obs = (result)=>{
           //Variable obserbacion
           let  obs =0;
-          //Promedio menor o igual a 12.5 entonces aprobado, caso ocntrario aprobado
           if(result >=4){
               obs =value="!Aprobado¡ &#x2714";
               return obs;
@@ -256,10 +233,8 @@
         }
       }).then((result) => {
         if (result.isConfirmed) {
-         // Swal.fire('Saved!', '', 'success')
          window.open('index.html');
         } else if (result.isDenied) {
-        //   Swal.fire('Changes are not saved', '', 'info')
         }
       })
 
@@ -269,13 +244,6 @@
     console.log(arrPromedios);
 
 
-    // en la segunda entrega ya quiero lograr hacer que actualice la calificación y también que permita eliminar.
-
-    const validarAlumnos = ()=>{
-
-        
-
-    }
 
     function existeAlumno(){
 
@@ -301,14 +269,10 @@
                     console.log(buscarAlumnoporRut);
 
                     if(buscarAlumnoporRut.length > 0){
-                        
-           
-        
-                        // return true;
-                          
+                    
+                 
                          }else{
-                             // validarCredencialesInvalidas();
-                            //  return false;
+                          
                           }
                       
                 }
@@ -342,64 +306,7 @@
         
     }
 
-    // dni.addEventListener('keyup', (e)=>{
-
-    //     if (e.keyCode === 13) {
-    //         console.log('hice enter');
-
-    //         const traerAlumnos = traerAlumnosLocalStorge(); 
-    //         console.log(traerAlumnos);
-
-    //         if(traerAlumnos == null){
-    //             alert('no hay alumnos registrados')
-    //         }else{
-                
-    //             const buscarAlumno = traerAlumnos.find((elemento,indice,array)=>{
-    //                 return elemento.dni == dni.value
-    //             })    
-
-    //             if(buscarAlumno == undefined){
-    //                 alert('no exisite alumno'); 
-    //             }else{
-    
-    //                 const buscarAlumnoporRut = traerAlumnos.filter((elemento,indice,array)=>{
-    //                     return elemento.dni == dni.value
-    //                 })    
-
-    //                 console.log(buscarAlumnoporRut);
-
-    //                 if(buscarAlumnoporRut.length > 0){
-                        
-           
-    //                     for (const prop in buscarAlumnoporRut) {
-    //                         // console.log(`obj.${prop} = ${buscarAlumnoporRut[0]["nombreCompleto"]}`);3
-    //                         nombreCompletoAlumno.value = buscarAlumnoporRut[0]["nombreCompleto"];
-    //                       }
-
-                    
-
-    //                         // return true;
-                          
-    //                      }else{
-    //                          // validarCredencialesInvalidas();
-    //                         //  return false;
-    //                       }
-                      
-
-    //             }
-        
-            
-
-                
-
-    //         }
-
-
-
-    //     }   
-
-    // });
-
+   
 
     const buscarAlumnoAsignatura = ()=>{
       
@@ -407,29 +314,6 @@
 
             const notasLocalStorage = buscarNotasLocalStorage();
             console.log(notasLocalStorage);
-
-            // if(notasLocalStorage == null){
-            //     // hacer alert
-            //     alert("no existe el usuario"); 
-            // }else{
-               
-            //     const buscarPass = usersLocalStorage.filter((elemento,indice,array)=>{
-            //         return elemento.pass == passValidar && elemento.usuario == userValidar
-                   
-            //     });   
-    
-            //     console.log(buscarPass);
-        
-    
-            //     if(buscarPass.length > 0){
-                  
-            //        return true;
-                 
-            //     }else{
-            //         // validarCredencialesInvalidas();
-            //         return false;
-            //      }
-            // }
 
     }
 

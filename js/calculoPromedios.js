@@ -5,7 +5,6 @@
     import {alumnoNoEncontrado} from './BuscarCalificaciones.js'
 
 
-
     class Promedio{
 
         constructor(dni, nombreCompletoAlumno,notaUno, notaDos, notaTres){
@@ -102,7 +101,6 @@
     const obs = (result)=>{
           //Variable obserbacion
           let  obs =0;
-          //Promedio menor o igual a 12.5 entonces aprobado, caso ocntrario aprobado
           if(result >=4){
               obs ="!Aprobado¡ &#x2714";
               return obs;
@@ -126,14 +124,10 @@
                 console.log(resultado);     
                
                 let observacion = obs(resultado);
-                
-                
+
                     crearTablaHtml(dni.value,nombreCompletoAlumno.value,notaUno.value,notaDos.value,notaTres.value,resultado,observacion);
                     LimpiarCampos();
-            
-                
-             
-                            
+                 
                 console.log(arrPromedios);
             }
 
@@ -221,26 +215,15 @@
         }
       }).then((result) => {
         if (result.isConfirmed) {
-         // Swal.fire('Saved!', '', 'success')
+      
          window.open('index.html');
         } else if (result.isDenied) {
-        //   Swal.fire('Changes are not saved', '', 'info')
         }
       })
 
 
     });
 
-    console.log(arrPromedios);
-
-
-    // en la segunda entrega ya quiero lograr hacer que actualice la calificación y también que permita eliminar.
-
-    const validarAlumnos = ()=>{
-
-        
-
-    }
 
     function existeAlumno1(arr){
 
@@ -258,16 +241,11 @@
         console.log(buscarAlumno);
     
         if(buscarAlumno == undefined){
-            // ingresarAlumnos(); 
-            // MensajeExitoso();
-            // LimpiarCampos();
+         
             console.log('no se encuentra dni asociado en la base de datos');
         }else{
-            // si está el alumno lo ingreso al nuevo array de alumno buscado. 
-            //arrAlumnoBuscado.push(buscarAlumno);
-            //console.log('el dni del alumno ya se encuentra registrado, intente nuevamente.');
-           
             
+  
         }
 
 
@@ -296,10 +274,9 @@
             console.log(traerAlumnos);
 
             if(traerAlumnos == null){
-                // hacer validaciópn para indiciar que no hay alumnos registrados.
-                // alert('no hay alumnos registrados')
+            
                 alumnoNoEncontrado();
-                // limpiarCampos();
+             
             }else{
                 
                 const buscarAlumno = traerAlumnos.find((elemento,indice,array)=>{
@@ -309,9 +286,7 @@
                 if(buscarAlumno == undefined){
       
                     existeAlumno1();
-                    // limpiarCampos();
-                    // hacer alerta para indiciar que no existe ese alumno en los registros de calificaciones
-                    // alert('no exisite alumno'); 
+                  
 
                 }else{
     
@@ -321,18 +296,6 @@
 
                     console.log('abajo resultado esperado')
                     console.log(buscarAlumnoporRut);
-
-                    /*  Probando destructuración de objetos.
-
-                    let [miCajaPrueba] = buscarAlumnoporRut;
-                    console.log('abajo resultado miCajaPrueba')
-                    console.log(miCajaPrueba);
-                    let nombreCompleto = miCajaPrueba.nombrecompleto; 
-                    console.log('abajo resultado nombreCompleto')
-                    console.log(nombreCompleto);
-                    console.log(nombreCompleto);
-
-                    */
 
                     if(buscarAlumnoporRut.length > 0){
                         
@@ -352,12 +315,6 @@
                           }
                           
                          }else{
-                            // enviar alert para inidicar que el rut no esta asociado a la asignatura seleccionada.
-                            console.log('aca se metio cuando no coincide con la asignatura')
-                            // asignaturaNoCoincide();
-                            // desactivarNotas();
-                            // limpiarCampos();
-                            //  return false;
                             desactivarNotas1();
                           }
                       
